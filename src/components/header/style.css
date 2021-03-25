@@ -1,0 +1,16 @@
+header {
+    border-bottom: 1px solid red; 
+}
+
+.header-cart  p {
+    color: red;
+    padding: 3px;
+    padding-bottom: 30px;  
+}
+.cart-link {
+    color: red;
+}
+
+.cartClassName {
+    color: red; 
+}
