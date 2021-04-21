@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 function NavBar() {
-    const [navbarOpen, setNavbarOpen] = useState(false)
+    // const [navbarOpen, setNavbarOpen] = useState(false)
 
     return( 
         <div>
@@ -16,7 +16,7 @@ function NavBar() {
                         <button 
                             className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" 
                             type="button">
-                            onClick={() => setNavbarOpen(!navbarOpen)}
+                            {/* onClick={() => setNavbarOpen(!navbarOpen)} */}
                             <span className="block relative w-6 h-px rounded-sm bg-white mt-1">Home</span>
                             <span className="block relative w-6 h-px rounded-sm bg-white mt-1">Shop</span>
                         </button>

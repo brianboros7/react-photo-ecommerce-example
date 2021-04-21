@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-
+// import {REACT_APP_UNSPLASH_KEY} from '../../config/plugins'
 
 function UnsplashAPI() {
     let [photoUrl, setPhotoUrl] = useState('');
@@ -11,16 +11,18 @@ function UnsplashAPI() {
     {/*
         * This api link works for Vanilla JS 
         but not React? 
-        https://api.unsplash.com/photos/WkfDrhxDMC8?client_id=gK52De2Tm_dL5o1IXKa9FROBAJ-LIYqR41xBdlg3X2k
+        https://api.unsplash.com/photos/WkfDrhxDMC8?client_id=
     */}
 
+    const url = "https://api.unsplash.com/photos/VzJjPuk53sk?client_id=drJmA_f2aSBk3wyiZ_vvM-rYJd27WLku0D1gUrhrPVk" 
     const loadData = () => {
-        fetch("https://api.unsplash.com/photos/VzJjPuk53sk?client_id=gK52De2Tm_dL5o1IXKa9FROBAJ-LIYqR41xBdlg3X2k")
+        fetch(url)
         .then((response) => response.json())
         .then(data => {
             setPhotoUrl(data.urls.full)
         }) 
     }
+    console.log("loaded data")
 
     useEffect(() => {
         loadData()
